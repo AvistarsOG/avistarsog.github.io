@@ -147,6 +147,32 @@
     <dialog class="builder-dialog" id="builder-dialog" aria-labelledby="builder-title">
       <form method="dialog" class="dialog-head"><div><p class="eyebrow">THE CUSTOM CONFIGURATOR</p><h2 id="builder-title">Let’s make your rig.</h2></div><button class="icon-button dialog-close" aria-label="Close custom builder" value="close">×</button></form>
       <form class="builder-form" id="builder-form">
+        <section class="customizer-preview" aria-label="Interactive PC preview">
+          <div class="preview-heading"><div><p class="eyebrow">YOUR BUILD, IN THE ROUND</p><h3>Take a closer look.</h3></div><button class="auto-rotate-button" id="auto-rotate" type="button" aria-pressed="false"><span aria-hidden="true">↻</span> Auto rotate</button></div>
+          <div class="pc-viewer-stage" id="pc-viewer-stage" aria-label="Drag to rotate the gaming PC">
+            <button class="viewer-arrow viewer-arrow-left" type="button" data-rotate="-45" aria-label="Rotate PC left">←</button>
+            <div class="pc-viewer-perspective"><div class="pc-model" id="pc-model"></div></div>
+            <button class="viewer-arrow viewer-arrow-right" type="button" data-rotate="45" aria-label="Rotate PC right">→</button>
+            <span class="viewer-angle" id="viewer-angle">0° · FRONT</span>
+          </div>
+          <div class="viewer-range-row"><span>FRONT</span><input id="view-angle" type="range" min="0" max="359" value="0" aria-label="Rotate PC view"><span>360°</span></div>
+          <div class="customizer-swatches">
+            <div class="swatch-group"><span class="swatch-label">CASE COLOR</span><div class="swatch-list" role="group" aria-label="Choose case color">
+              <button class="color-swatch is-selected" type="button" data-case-color="#252923" data-color-name="Obsidian" aria-label="Obsidian black case" aria-pressed="true"><span style="--swatch:#252923"></span></button>
+              <button class="color-swatch" type="button" data-case-color="#e8e8e1" data-color-name="Glacier" aria-label="Glacier white case" aria-pressed="false"><span style="--swatch:#e8e8e1"></span></button>
+              <button class="color-swatch" type="button" data-case-color="#586a48" data-color-name="Moss" aria-label="Moss green case" aria-pressed="false"><span style="--swatch:#586a48"></span></button>
+              <button class="color-swatch" type="button" data-case-color="#9b5140" data-color-name="Ember" aria-label="Ember red case" aria-pressed="false"><span style="--swatch:#9b5140"></span></button>
+              <button class="color-swatch" type="button" data-case-color="#647b99" data-color-name="Cobalt" aria-label="Cobalt blue case" aria-pressed="false"><span style="--swatch:#647b99"></span></button>
+            </div><span class="swatch-current" id="case-color-name">Obsidian</span></div>
+            <div class="swatch-group"><span class="swatch-label">LIGHTING</span><div class="swatch-list light-swatches" role="group" aria-label="Choose fan lighting">
+              <button class="color-swatch is-selected" type="button" data-light-color="#d9ff53" data-light-name="Lime" aria-label="Lime lighting" aria-pressed="true"><span style="--swatch:#d9ff53"></span></button>
+              <button class="color-swatch" type="button" data-light-color="#66c7ff" data-light-name="Ice blue" aria-label="Ice blue lighting" aria-pressed="false"><span style="--swatch:#66c7ff"></span></button>
+              <button class="color-swatch" type="button" data-light-color="#cf82ff" data-light-name="Violet" aria-label="Violet lighting" aria-pressed="false"><span style="--swatch:#cf82ff"></span></button>
+              <button class="color-swatch" type="button" data-light-color="#ff846b" data-light-name="Coral" aria-label="Coral lighting" aria-pressed="false"><span style="--swatch:#ff846b"></span></button>
+              <button class="color-swatch" type="button" data-light-color="#f4f4ec" data-light-name="Ice white" aria-label="Ice white lighting" aria-pressed="false"><span style="--swatch:#f4f4ec"></span></button>
+            </div><span class="swatch-current" id="light-color-name">Lime</span></div>
+          </div>
+        </section>
         <label class="config-field">What are you playing?
           <select name="use"><option value="1080p">1080p gaming</option><option value="1440p" selected>1440p gaming</option><option value="4k">4K gaming & creation</option></select>
         </label>
@@ -154,10 +180,22 @@
           <select name="cpu"><option value="0">AMD Ryzen 5 7600</option><option value="16000">AMD Ryzen 7 7800X3D (+₹16,000)</option><option value="32000">AMD Ryzen 9 9900X (+₹32,000)</option></select>
         </label>
         <label class="config-field">Choose your graphics card
-          <select name="gpu"><option value="0">GeForce RTX 4060 8GB</option><option value="25000">GeForce RTX 4070 SUPER 12GB (+₹25,000)</option><option value="60000">GeForce RTX 4080 SUPER 16GB (+₹60,000)</option></select>
+          <select name="gpu">
+            <option value="0">NVIDIA GeForce RTX 4060 8GB</option>
+            <option value="25000">NVIDIA GeForce RTX 4070 SUPER 12GB (+₹25,000)</option>
+            <option value="60000">NVIDIA GeForce RTX 4080 SUPER 16GB (+₹60,000)</option>
+            <option value="125000">NVIDIA GeForce RTX 4090 24GB (+₹1,25,000)</option>
+            <option value="48000">AMD Radeon RX 7900 XTX 24GB (+₹48,000)</option>
+          </select>
         </label>
         <label class="config-field">Memory
           <select name="ram"><option value="0">32GB DDR5</option><option value="9000">64GB DDR5 (+₹9,000)</option></select>
+        </label>
+        <label class="config-field">Storage
+          <select name="storage"><option value="0">1TB NVMe SSD</option><option value="5000">2TB NVMe SSD (+₹5,000)</option><option value="12000">4TB NVMe SSD (+₹12,000)</option></select>
+        </label>
+        <label class="config-field">CPU cooling
+          <select name="cooling"><option value="0">Tower air cooler</option><option value="9000">240mm liquid cooler (+₹9,000)</option><option value="14000">360mm liquid cooler (+₹14,000)</option></select>
         </label>
         <div class="builder-total"><span>Estimated build price<small>Includes assembly & 3-year warranty</small></span><strong id="builder-total">₹1,24,990</strong></div>
         <button class="button button-dark builder-submit" type="submit">Add custom build to bag <span aria-hidden="true">↗</span></button>
