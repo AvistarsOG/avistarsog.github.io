@@ -1,282 +1,175 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Atharva Bajpai | Data Science Portfolio</title>
-    <meta
-      name="description"
-      content="Portfolio website for Atharva Bajpai, a Data Science student focused on AI, machine learning, and computer science fundamentals."
-    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#10110f" />
+    <meta name="description" content="Find your next-level gaming PC. Shop hand-built rigs or configure a custom build, expertly assembled and ready to play." />
+    <title>FORGE — PCs built for your next level</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="bg-grid"></div>
-    <div class="orb orb-one"></div>
-    <div class="orb orb-two"></div>
-    <div class="orb orb-three"></div>
-
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="announcement">
+      <span>BUILT TO OUTPLAY</span>
+      <span>Free insured shipping on every custom build <span aria-hidden="true">↗</span></span>
+      <a href="#support">Need a hand? Talk to a human</a>
+    </div>
     <header class="site-header">
-      <div class="container nav-wrap">
-        <a href="#home" class="brand">
-          <span class="brand-mark">AB</span>
-          <span class="brand-text">Atharva</span>
-        </a>
-        <nav class="main-nav">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#journey">Journey</a>
-          <a href="#contact">Contact</a>
+      <div class="nav-shell">
+        <a class="brand" href="#home" aria-label="Forge home"><span class="brand-symbol" aria-hidden="true">F<span>.</span></span><span>FORGE</span></a>
+        <button class="menu-toggle icon-button" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span></button>
+        <nav class="main-nav" id="primary-nav" aria-label="Main navigation">
+          <a href="#systems">Gaming PCs</a>
+          <a href="#builder">Build your own</a>
+          <a href="#why-forge">Why FORGE</a>
         </nav>
+        <div class="nav-actions">
+          <a class="nav-support" href="#support">Support</a>
+          <button class="cart-trigger" type="button" aria-label="Open shopping bag">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l1 12H4L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg>
+            <span>Bag</span><span class="cart-count" aria-live="polite">0</span>
+          </button>
+        </div>
       </div>
     </header>
 
-    <main>
-      <section id="home" class="hero container">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Data Science Student • AI Enthusiast • Problem Solver</p>
-          <h1>
-            I build ideas into
-            <span class="gradient-text">smart solutions.</span>
-          </h1>
-          <p class="lead">
-            Hi, I’m <strong>Atharva Bajpai</strong> — a curious data science student with a strong interest in Artificial Intelligence, machine learning, mathematics, and programming. I enjoy learning computer science fundamentals and turning concepts into practical models and systems.
-          </p>
-          <div class="cta-row">
-            <a href="#projects" class="btn btn-primary">Explore Projects</a>
-            <a href="#contact" class="btn btn-secondary">Let’s Connect</a>
+    <main id="main">
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> YOUR NEXT LEVEL STARTS HERE</p>
+          <h1>More game.<br /><span>Less loading.</span></h1>
+          <p class="hero-lead">Serious performance, without the guesswork. Find your next prebuilt or create a rig that’s unmistakably yours.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#systems">Shop gaming PCs <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#builder">Build your own <span aria-hidden="true">→</span></a>
           </div>
-          <ul class="mini-stats" aria-label="Profile stats">
-            <li><strong class="count" data-target="2">0</strong><span>+ years learning</span></li>
-            <li><strong class="count" data-target="7">0</strong><span>core skills</span></li>
-            <li><strong class="count" data-target="4">0</strong><span>project focus areas</span></li>
-          </ul>
+          <div class="hero-proof"><div class="avatar-stack" aria-hidden="true"><span>J</span><span>M</span><span>A</span><span>+</span></div><p><strong>4.9/5</strong> from 2,400+ happy players</p></div>
         </div>
+        <div class="hero-art" aria-label="Illustration of the Forge Vanta gaming PC">
+          <div class="art-stamp">ENGINEERED<br />TO PLAY<span>✳</span></div>
+          <svg class="hero-tower" viewBox="0 0 550 560" role="img" aria-labelledby="tower-title">
+            <title id="tower-title">A glass-sided gaming PC with vivid green-lit cooling fans</title>
+            <defs>
+              <linearGradient id="case" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#363a35"/><stop offset=".5" stop-color="#151815"/><stop offset="1" stop-color="#090b09"/></linearGradient>
+              <linearGradient id="glass" x1="0" x2="1"><stop stop-color="#a6b4a4" stop-opacity=".22"/><stop offset="1" stop-color="#151b17" stop-opacity=".72"/></linearGradient>
+              <linearGradient id="glow" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#efff57"/><stop offset="1" stop-color="#73c62b"/></linearGradient>
+              <filter id="blur"><feGaussianBlur stdDeviation="24"/></filter>
+            </defs>
+            <ellipse cx="293" cy="480" rx="192" ry="28" fill="#99c832" opacity=".22" filter="url(#blur)"/>
+            <g transform="translate(84 28)">
+              <path d="M62 25 329 1l66 42v424l-67 37-266-29Z" fill="url(#case)" stroke="#565c53" stroke-width="3"/>
+              <path d="m69 34 257-21v411L69 400Z" fill="url(#glass)" stroke="#778174" stroke-opacity=".48" stroke-width="2"/>
+              <path d="m329 13 57 36v408l-57 32Z" fill="#10130f" stroke="#646b60" stroke-width="2"/>
+              <path d="m83 52 230-19v12L83 65Z" fill="#e8f0df" opacity=".17"/>
+              <path d="m94 96 111-9 1 148-111 8Z" fill="#232a24" stroke="#626d5f"/>
+              <path d="m105 109 90-7v101l-90 7Z" fill="#11140f"/>
+              <path d="m115 125 66-5v68l-66 5Z" fill="#30362b" stroke="#9cc352" stroke-opacity=".52"/>
+              <path d="m130 140 35-3v35l-35 3Z" fill="url(#glow)" opacity=".85"/>
+              <path d="m230 72 66-6 1 20-66 6Z" fill="#7fb23a" opacity=".8"/>
+              <path d="m232 103 64-5v4l-64 5Zm0 10 46-4v4l-46 4Z" fill="#828b79" opacity=".62"/>
+              <path d="m109 274 178-14v7l-178 14Z" fill="#777f6c" opacity=".55"/>
+              <path d="m110 289 178-14v7l-178 14Z" fill="#777f6c" opacity=".35"/>
+              <g fill="none" stroke="url(#glow)" stroke-width="4">
+                <circle cx="149" cy="331" r="36"/><circle cx="149" cy="331" r="27" stroke-width="1.5"/>
+                <circle cx="244" cy="323" r="36"/><circle cx="244" cy="323" r="27" stroke-width="1.5"/>
+              </g>
+              <g fill="#b4e65c" opacity=".72">
+                <path d="M149 300c11 10 11 16 0 28-11-12-11-18 0-28Zm31 31c-10 11-16 11-28 0 12-11 18-11 28 0Zm-31 31c-11-10-11-16 0-28 11 12 11 18 0 28Zm-31-31c10-11 16-11 28 0-12 11-18 11-28 0Z"/>
+                <path d="M244 292c11 10 11 16 0 28-11-12-11-18 0-28Zm31 31c-10 11-16 11-28 0 12-11 18-11 28 0Zm-31 31c-11-10-11-16 0-28 11 12 11 18 0 28Zm-31-31c10-11 16-11 28 0-12 11-18 11-28 0Z"/>
+              </g>
+              <path d="m340 74 34 6v4l-34-6Zm0 12 34 6v4l-34-6Zm0 12 34 6v4l-34-6Z" fill="#b7c2ad" opacity=".4"/>
+              <circle cx="359" cy="393" r="4" fill="#ceef75"/><circle cx="359" cy="408" r="3" fill="#788071"/>
+              <path d="m75 434 251 29v13L74 448Z" fill="#11140f"/>
+            </g>
+          </svg>
+          <div class="hero-product-note"><span class="note-line"></span><div><strong>VANTA / 01</strong><small>Built for the ultra settings</small></div></div>
+          <div class="hero-price"><small>STARTING AT</small><strong>₹1,24,990</strong><span>Ready when you are <b>↗</b></span></div>
+        </div>
+        <div class="hero-index" aria-hidden="true">01 — PLAY WITHOUT LIMITS</div>
+      </section>
 
-        <div class="hero-visual reveal">
-          <div class="profile-panel glass-panel tilt-card">
-            <div class="avatar-shell">
-              <div class="avatar">AB</div>
-            </div>
-            <div class="panel-content">
-              <p class="panel-label">Current focus</p>
-              <h2>AI + Data Science</h2>
-              <div class="chip-row">
-                <span>Python</span>
-                <span>ML</span>
-                <span>Math</span>
-              </div>
-            </div>
-            <div class="floating-badge badge-one">OOPs</div>
-            <div class="floating-badge badge-two">DSA</div>
-            <div class="floating-badge badge-three">AI</div>
+      <section class="benefits" aria-label="Shopping benefits">
+        <div><span class="benefit-icon">✳</span><p><strong>Built by specialists</strong><small>Every cable, considered.</small></p></div>
+        <div><span class="benefit-icon">⌁</span><p><strong>Stress-tested, always</strong><small>Ready on day one.</small></p></div>
+        <div><span class="benefit-icon">↗</span><p><strong>3-year warranty</strong><small>Real people, real support.</small></p></div>
+        <div><span class="benefit-icon">◉</span><p><strong>Ships across India</strong><small>Insured, straight to you.</small></p></div>
+      </section>
+
+      <section class="systems section-pad" id="systems">
+        <div class="section-top">
+          <div><p class="eyebrow">THE LINEUP</p><h2>Pick your <span>power.</span></h2></div>
+          <a href="#builder" class="text-link">Need something different? Build it <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="catalog-controls">
+          <div class="filter-list" role="group" aria-label="Filter PCs by use">
+            <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">All systems</button>
+            <button class="filter-chip" type="button" data-filter="1080p" aria-pressed="false">1080p gaming</button>
+            <button class="filter-chip" type="button" data-filter="1440p" aria-pressed="false">1440p gaming</button>
+            <button class="filter-chip" type="button" data-filter="4k" aria-pressed="false">4K & creator</button>
           </div>
+          <label class="sort-control">Sort by
+            <select id="sort-products" aria-label="Sort products">
+              <option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option>
+            </select>
+          </label>
+        </div>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <div class="catalog-bottom"><span id="product-count"></span><a href="#builder" class="text-link">Still not seeing your dream rig? <strong>Make it yours →</strong></a></div>
+      </section>
+
+      <section class="builder-banner" id="builder">
+        <div class="builder-copy"><p class="eyebrow">YOUR GAME. YOUR RULES.</p><h2>Dream it.<br /><span>We’ll build it.</span></h2><p>Choose your performance, dial in your parts, and leave the cable management to us.</p><button class="button button-lime" type="button" id="open-builder">Start your build <span aria-hidden="true">↗</span></button><small>About 2 minutes · Zero tech degree required</small></div>
+        <div class="builder-visual" aria-hidden="true"><div class="builder-orbit orbit-a"></div><div class="builder-orbit orbit-b"></div><div class="builder-core">F<span>.</span></div><span class="orbit-label label-cpu">CPU <b>01</b></span><span class="orbit-label label-gpu">GPU <b>02</b></span><span class="orbit-label label-ram">RAM <b>03</b></span><span class="orbit-label label-cooling">COOLING <b>04</b></span><div class="builder-cross cross-a">✳</div><div class="builder-cross cross-b">✳</div></div>
+      </section>
+
+      <section class="why section-pad" id="why-forge">
+        <div class="why-heading"><p class="eyebrow">DETAILS MAKE THE DIFFERENCE</p><h2>Not just built.<br /><span>Built right.</span></h2><p>Behind every FORGE system is a real builder, a checklist that gets checked, and a whole lot of care.</p><a class="text-link" href="#support">See how we build <span aria-hidden="true">→</span></a></div>
+        <div class="why-steps">
+          <article><span class="step-num">01</span><div><h3>Parts picked with purpose.</h3><p>No mystery components. Every part is selected for compatibility, reliability, and how you actually play.</p></div><span class="step-mark">↗</span></article>
+          <article><span class="step-num">02</span><div><h3>Assembled by hand.</h3><p>Your PC is built, cable-managed, and updated by our team. Not mass-produced. Not rushed.</p></div><span class="step-mark">↗</span></article>
+          <article><span class="step-num">03</span><div><h3>Tested before takeoff.</h3><p>Every system clears a full performance and stability check before it makes its way to your setup.</p></div><span class="step-mark">↗</span></article>
+          <article><span class="step-num">04</span><div><h3>Here after unboxing.</h3><p>Three years of coverage and actual humans ready to help, from setup questions to upgrades.</p></div><span class="step-mark">↗</span></article>
         </div>
       </section>
 
-      <section id="about" class="about container section-space">
-        <div class="section-heading reveal">
-          <p class="eyebrow">About Me</p>
-          <h2>Driven by curiosity, powered by learning.</h2>
-        </div>
+      <section class="quote-band"><span class="quote-star">✳</span><blockquote>“I plugged it in, hit play, and forgot the PC was even there. <em>That’s exactly how it should be.</em>”</blockquote><div class="quote-byline"><span class="quote-avatar">RK</span><span><strong>Rohan K.</strong><small>Vanta 4070 · Verified player</small></span><span class="quote-rating">★★★★★</span></div><span class="quote-count">A LITTLE LOVE FROM THE LOBBY</span></section>
 
-        <div class="about-grid">
-          <div class="glass-panel about-card reveal">
-            <p>
-              I’m a student exploring the world of data science and Artificial Intelligence with a strong foundation in mathematics, coding, and problem-solving. My learning path revolves around understanding algorithms, data structures, object-oriented programming, and AI models that can make meaningful decisions from data.
-            </p>
-            <p>
-              I enjoy building practical projects, strengthening my fundamentals, and developing a thoughtful approach to solving real-world problems using technology.
-            </p>
-          </div>
-
-          <div class="glass-panel metrics reveal">
-            <div>
-              <span class="metric-label">Core areas</span>
-              <strong>ML • AI • Programming</strong>
-            </div>
-            <div>
-              <span class="metric-label">Learning mindset</span>
-              <strong>Build, test, improve</strong>
-            </div>
-            <div>
-              <span class="metric-label">Strength</span>
-              <strong>Logical thinking</strong>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="skills" class="skills container section-space">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Skills</p>
-          <h2>Tools I’m sharpening every day.</h2>
-        </div>
-
-        <div class="skills-grid">
-          <article class="skill-card reveal tilt-card">
-            <div class="skill-icon">PY</div>
-            <h3>Python</h3>
-            <p>Core scripting, logic building, data handling, and model development.</p>
-          </article>
-          <article class="skill-card reveal tilt-card">
-            <div class="skill-icon">ML</div>
-            <h3>Machine Learning</h3>
-            <p>Model thinking, feature engineering, evaluation, and prediction pipelines.</p>
-          </article>
-          <article class="skill-card reveal tilt-card">
-            <div class="skill-icon">AI</div>
-            <h3>Artificial Intelligence</h3>
-            <p>Exploring intelligent systems, optimization, and problem-solving approaches.</p>
-          </article>
-          <article class="skill-card reveal tilt-card">
-            <div class="skill-icon">DS</div>
-            <h3>Data Structures</h3>
-            <p>Efficient coding patterns, algorithmic thinking, and complexity awareness.</p>
-          </article>
-          <article class="skill-card reveal tilt-card">
-            <div class="skill-icon">OOP</div>
-            <h3>OOP Concepts</h3>
-            <p>Reusable design, encapsulation, abstraction, and clean software structure.</p>
-          </article>
-          <article class="skill-card reveal tilt-card">
-            <div class="skill-icon">MT</div>
-            <h3>Mathematics</h3>
-            <p>Statistics, linear algebra, probability, and reasoning behind models.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="projects" class="projects container section-space">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Featured Work</p>
-          <h2>Projects that reflect my learning journey.</h2>
-        </div>
-
-        <div class="projects-grid">
-          <article class="project-card reveal tilt-card">
-            <div class="project-topline">
-              <span class="project-tag">ML</span>
-              <span class="project-year">2025</span>
-            </div>
-            <h3>Sales Prediction Model</h3>
-            <p>Built a predictive model to estimate future sales trends using structured data and evaluation metrics.</p>
-            <ul>
-              <li>Python</li>
-              <li>Pandas</li>
-              <li>Scikit-learn</li>
-            </ul>
-          </article>
-
-          <article class="project-card reveal tilt-card">
-            <div class="project-topline">
-              <span class="project-tag">AI</span>
-              <span class="project-year">2025</span>
-            </div>
-            <h3>Smart Recommendation Prototype</h3>
-            <p>Explored recommendation logic based on behavior patterns and similarity scoring for user-centric suggestions.</p>
-            <ul>
-              <li>Python</li>
-              <li>NumPy</li>
-              <li>Analytics</li>
-            </ul>
-          </article>
-
-          <article class="project-card reveal tilt-card">
-            <div class="project-topline">
-              <span class="project-tag">DSA</span>
-              <span class="project-year">2024</span>
-            </div>
-            <h3>Problem Solving Toolkit</h3>
-            <p>Developed a personal coding toolkit covering algorithmic patterns, optimizations, and data structure implementations.</p>
-            <ul>
-              <li>C++</li>
-              <li>Java</li>
-              <li>Logic</li>
-            </ul>
-          </article>
-
-          <article class="project-card reveal tilt-card">
-            <div class="project-topline">
-              <span class="project-tag">Web</span>
-              <span class="project-year">2025</span>
-            </div>
-            <h3>Interactive Portfolio</h3>
-            <p>Designed a modern portfolio website with motion, layered UI, and clean visual storytelling for personal branding.</p>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="journey" class="journey container section-space">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Learning Journey</p>
-          <h2>Growing from fundamentals to intelligent systems.</h2>
-        </div>
-
-        <div class="timeline reveal">
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content glass-panel">
-              <p class="timeline-year">2023</p>
-              <h3>Building foundations</h3>
-              <p>Started learning core coding concepts, mathematics, and programming logic.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content glass-panel">
-              <p class="timeline-year">2024</p>
-              <h3>Exploring DS & OOP</h3>
-              <p>Strengthened data structures, object-oriented design, and analytical problem solving.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content glass-panel">
-              <p class="timeline-year">2025</p>
-              <h3>Deepening AI & ML</h3>
-              <p>Focused on machine learning, predictive modeling, and intelligent system thinking.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="contact container section-space">
-        <div class="contact-box glass-panel reveal">
-          <div>
-            <p class="eyebrow">Let’s connect</p>
-            <h2>Open to learning, collaboration, and opportunities.</h2>
-          </div>
-          <div class="contact-actions">
-            <a href="mailto:me@atharvabajpai.online" class="btn btn-primary">Email Me</a>
-            <a href="https://github.com/atharvabajpai" target="_blank" rel="noreferrer" class="btn btn-secondary">GitHub</a>
-            <a href="https://linkedin.com/" target="_blank" rel="noreferrer" class="btn btn-secondary">LinkedIn</a>
-          </div>
-        </div>
-      </section>
+      <section class="support-strip" id="support"><div><span class="support-icon">✳</span><div><h2>Good gear. Better backup.</h2><p>Real people, no scripts. We're here before and after game time.</p></div></div><a href="mailto:hello@forgepc.in" class="button button-dark">Talk to our team <span aria-hidden="true">↗</span></a></section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-wrap">
-        <p>© <span id="year">2025</span> Atharva Bajpai</p>
-        <p>Crafted with curiosity and code.</p>
-      </div>
-    </footer>
+    <footer class="site-footer"><div class="footer-main"><a class="brand footer-brand" href="#home"><span class="brand-symbol">F<span>.</span></span><span>FORGE</span></a><p>Built for the next level.<br />Assembled with care in India.</p><div class="footer-links"><a href="#systems">Gaming PCs</a><a href="#builder">Build your own</a><a href="#why-forge">Our promise</a><a href="mailto:hello@forgepc.in">Contact</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> FORGE SYSTEMS. MADE TO PLAY.</span><span>Prices in INR · Free insured shipping</span></div></footer>
 
-    <script src="script.js"></script>
+    <dialog class="builder-dialog" id="builder-dialog" aria-labelledby="builder-title">
+      <form method="dialog" class="dialog-head"><div><p class="eyebrow">THE CUSTOM CONFIGURATOR</p><h2 id="builder-title">Let’s make your rig.</h2></div><button class="icon-button dialog-close" aria-label="Close custom builder" value="close">×</button></form>
+      <form class="builder-form" id="builder-form">
+        <label class="config-field">What are you playing?
+          <select name="use"><option value="1080p">1080p gaming</option><option value="1440p" selected>1440p gaming</option><option value="4k">4K gaming & creation</option></select>
+        </label>
+        <label class="config-field">Choose your processor
+          <select name="cpu"><option value="0">AMD Ryzen 5 7600</option><option value="16000">AMD Ryzen 7 7800X3D (+₹16,000)</option><option value="32000">AMD Ryzen 9 9900X (+₹32,000)</option></select>
+        </label>
+        <label class="config-field">Choose your graphics card
+          <select name="gpu"><option value="0">GeForce RTX 4060 8GB</option><option value="25000">GeForce RTX 4070 SUPER 12GB (+₹25,000)</option><option value="60000">GeForce RTX 4080 SUPER 16GB (+₹60,000)</option></select>
+        </label>
+        <label class="config-field">Memory
+          <select name="ram"><option value="0">32GB DDR5</option><option value="9000">64GB DDR5 (+₹9,000)</option></select>
+        </label>
+        <div class="builder-total"><span>Estimated build price<small>Includes assembly & 3-year warranty</small></span><strong id="builder-total">₹1,24,990</strong></div>
+        <button class="button button-dark builder-submit" type="submit">Add custom build to bag <span aria-hidden="true">↗</span></button>
+      </form>
+    </dialog>
+    <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-title">
+      <div class="cart-head"><div><p class="eyebrow">YOUR NEXT LEVEL</p><h2 id="cart-title">Your bag <span class="cart-count">0</span></h2></div><button class="icon-button cart-close" type="button" aria-label="Close shopping bag">×</button></div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-empty" id="cart-empty"><span>✳</span><h3>Your next rig goes here.</h3><p>Make your pick, or build one that’s all yours.</p><a class="text-link cart-browse" href="#systems">Browse the lineup <span aria-hidden="true">→</span></a></div>
+      <div class="cart-footer" id="cart-footer"><div class="cart-subtotal"><span>Estimated total</span><strong id="cart-total">₹0</strong></div><p>Shipping & final configuration confirmed at checkout.</p><button class="button button-dark checkout-button" type="button" id="checkout-button">Request a build quote <span aria-hidden="true">↗</span></button><small>No payment collected on this demo storefront.</small></div>
+    </dialog>
+    <div class="toast" role="status" aria-live="polite"></div>
+    <div class="dialog-backdrop" hidden></div>
   </body>
 </html>
